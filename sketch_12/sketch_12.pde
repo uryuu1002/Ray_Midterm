@@ -14,19 +14,19 @@ void setup() {
 
 void draw() {
   background(bgColor);
+  if (mousePressed == true) {
+    on = true;
+  } else {
+    on = false;
+  }
+  loop();
+}
 
+void mouseReleased() {
   if (on) {
     bgColor = 255;
   } 
   if (!on) {
     bgColor = 0;
-  }
-}
-
-void mouseReleased() {
-  if (mousePressed == true) {
-    on = true;
-  } else {
-    on = false;
   }
 }

@@ -14,6 +14,6 @@ void setup() {
 void draw() {
   background(50);
   translate(width/2, height/2);
-  rotate(radians(map(r, 0, 360, mouseX/2 , 360)));
+  rotate(radians(map(r, 0, PI, mouseX/PI*2 , PI)));
   triangle(0, -100, 50, 100, -50, 100);
 }

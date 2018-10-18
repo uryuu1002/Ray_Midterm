@@ -11,14 +11,13 @@
 
 void setup() {
   size(600, 600);
-  smooth();
   
   for (int i = 0; i < width; i++) {
     for (int j = 0; j < height; j++) {
-      float r = map(i, 0, 255, 0, width);
-      float g = map(j, 0, 255, 0, height);
+      float r = map(i, 0, 255, 0, width/3);
+      float g = map(j, 0, 255, 0, height/3);
       stroke(r, g, 175);
-      point(j, i);
+      point(i, j);
       
     }
   }

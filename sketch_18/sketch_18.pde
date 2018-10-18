@@ -26,8 +26,9 @@ void draw() {
 
       for (int h = 0; h < height; h = h + 60) {
         for (int z = 0; z < width; z = z + 60) {
-          rect(h, z, width/gridW, height/gridH);
+          
           fill(greyColors[i][j]);
+          rect(h, z, width/gridW, height/gridH);
         }
       }
     }
