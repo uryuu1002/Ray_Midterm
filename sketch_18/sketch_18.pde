@@ -22,15 +22,14 @@ void setup() {
 void draw() {
   for (int i = 0; i < gridW; i++) {
     for (int j = 0; j < gridH; j++) {
-      greyColors[i][j]+=10;
-
-      for (int h = 0; h < height; h = h + 60) {
-        for (int z = 0; z < width; z = z + 60) {
-          
-          fill(greyColors[i][j]);
-          rect(h, z, width/gridW, height/gridH);
-        }
+      greyColors[i][j]+=1;
+      
+      if(greyColors[i][j] > 255){
+            greyColors[i][j]=0;
       }
+      
+      fill(greyColors[i][j]);
+      rect(map(i, 0, gridW, 0, width), map(j, 0, gridH, 0, height), width/gridW, height/gridH);
     }
   }
 }
